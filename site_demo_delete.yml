@@ -2,7 +2,7 @@
 - hosts: openshift-master
   become: yes
   become_method: sudo
-  include_vars:
+  vars_files:
     - group_vars/demo.yml
   roles:
     - delete_app
