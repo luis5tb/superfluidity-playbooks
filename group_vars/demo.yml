@@ -1,0 +1,3 @@
+---
+application_name: "demo"
+openshift_app_git_repo: "https://github.com/openshift/ruby-hello-world.git"

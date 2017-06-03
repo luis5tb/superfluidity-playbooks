@@ -1,0 +1,6 @@
+---
+- name: Create new {{ application_name }} project
+  command: oc new-project {{ application_name }}
+
+- name: Create new {{ application_name }} app
+  command: oc new-app {{ openshift_app_git_repo }} --name {{ application_name }}
