@@ -5,7 +5,7 @@
 - name: Copy openshift template
   template:
     src: hello-pod.j2
-    dst: "{{ template_path }}"
+    dest: "{{ template_path }}"
 
 - name: Create new {{ application_name }} app
   command: oc create -f {{ template_path }} --name {{ application_name }}
