@@ -8,4 +8,4 @@
     dest: "{{ template_path }}"
 
 - name: Create new {{ application_name }} app
-  command: oc create -f {{ template_path }} --name {{ application_name }}
+  command: oc create -f {{ template_path }}
