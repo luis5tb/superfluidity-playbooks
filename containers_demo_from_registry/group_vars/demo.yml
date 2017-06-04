@@ -1,0 +1,3 @@
+---
+application_name: "demo-registry"
+openshift_app_image: "celebdor/kuryr-demo:latest"
