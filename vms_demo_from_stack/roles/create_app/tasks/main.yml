@@ -1,0 +1,13 @@
+---
+- name: Copy heat template
+  template:
+    src: stack.j2
+    dest: "{{ template_path }}"
+
+- name: Copy heat parameters
+  template:
+    src: parameters.j2
+    dest: "{{ parameters_path }}"
+
+- name: Create new {{ application_name }} stack
+  command: openstack stack create -e {{ parameters_path }} -t {{ template_path }} {{ application_name }}

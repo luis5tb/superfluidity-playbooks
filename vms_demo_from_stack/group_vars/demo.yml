@@ -1,0 +1,8 @@
+---
+application_name: "demo"
+
+vm_image: "cirros"
+vm_flavor: "m1.small"
+public_net: "new_exct"
+vm_net_cidr: "20.0.0.0/24"
+vm_net_gateway: "20.0.0.1"

@@ -1,0 +1,3 @@
+---
+template_path: "/tmp/{{ application_name }}_template.yaml"
+parameters_path: "/tmp/{{ application_name }}_parameters.yaml"

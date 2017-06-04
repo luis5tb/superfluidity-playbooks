@@ -1,0 +1,3 @@
+---
+- name: Delete {{ application_name }} project
+  command: openstack stack delete -y {{ application_name }}
