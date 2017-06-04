@@ -1,5 +1,5 @@
 ---
-- hosts: openshift-master
+- hosts: provider-master
   become: yes
   become_method: sudo
   vars_files:
