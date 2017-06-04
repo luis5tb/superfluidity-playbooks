@@ -1,0 +1,8 @@
+---
+- hosts: openshift-master
+  become: yes
+  become_method: sudo
+  vars_files:
+    - group_vars/demo.yml
+  roles:
+    - scale_app
