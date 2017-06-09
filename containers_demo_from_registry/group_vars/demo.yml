@@ -1,4 +1,4 @@
 ---
 application_name: "demo-registry"
 openshift_app_image: "celebdor/kuryr-demo:latest"
-scale_to: "5"
+scale_to: "3"
