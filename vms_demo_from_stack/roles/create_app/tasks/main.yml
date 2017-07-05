@@ -10,4 +10,4 @@
     dest: "{{ parameters_path }}"
 
 - name: Create new {{ application_name }} stack
-  command: openstack stack create -e {{ parameters_path }} -t {{ template_path }} {{ application_name }}
+  command: openstack --os-cloud superfluidity stack create -e {{ parameters_path }} -t {{ template_path }} {{ application_name }}
