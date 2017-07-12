@@ -1,0 +1,14 @@
+---
+- name: Create or Remove BBU Container
+  docker_container:
+    name: "{{ bbu_name }}"
+    image: "{{ bbu_image }}"
+    state: "{{ state }}"
+    privileged: True
+    capabilities: all
+    detach: True
+    tty: True
+    env:
+      I_NAME: "{{ I_NAME }}"
+      EPC_IP: "{{ EPC_IP }}"
+      RRH_IP: "{{ RRH_IP }}"

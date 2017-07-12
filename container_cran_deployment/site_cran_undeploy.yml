@@ -1,0 +1,30 @@
+---
+- hosts: rrh-host
+  become: yes
+  become_method: sudo
+  vars_files:
+    - group_vars/main.yml
+  vars:
+    state: "absent"
+  roles:
+  - rrh_container
+
+- hosts: bbu-host
+  become: yes
+  become_method: sudo
+  vars_files:
+    - group_vars/main.yml
+  vars:
+    state: "absent"
+  roles:
+  - bbu_container
+
+- hosts: epc-host
+  become: yes
+  become_method: sudo
+  vars_files:
+    - group_vars/main.yml
+  vars:
+    state: "absent"
+  roles:
+  - epc_container

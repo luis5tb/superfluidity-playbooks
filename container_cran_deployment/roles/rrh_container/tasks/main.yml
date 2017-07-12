@@ -1,0 +1,17 @@
+---
+- name: Create or Remove RRH Container
+  docker_container:
+    name: "{{ rrh_name }}"
+    image: "{{ rrh_image }}"
+    state: "{{ state }}"
+    privileged: True
+    capabilities: all
+    detach: True
+    tty: True
+    network_mode: host
+    env:
+      I_NAME: "{{ I_NAME }}"
+    volumes:
+      - /dev/uhid:/dev/uhid
+      - /tmp/.X11-unix:/tmp/.X11-unix
+

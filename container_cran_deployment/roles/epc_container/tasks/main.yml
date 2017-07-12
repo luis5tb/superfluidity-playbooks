@@ -1,0 +1,11 @@
+---
+- name: Create or Remove EPC Container
+  docker_container:
+    name: "{{ epc_name }}"
+    image: "{{ epc_image }}"
+    state: "{{ state }}"
+    privileged: True
+    capabilities: all
+    volumes:
+      - /lib/modules:/lib/modules
+      - /tmp/.X11-unix:/tmp/.X11-unix
