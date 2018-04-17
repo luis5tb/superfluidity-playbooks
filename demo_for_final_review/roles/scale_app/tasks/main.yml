@@ -1,0 +1,6 @@
+---
+- name: Move to project {{ application_name }}
+  command: oc project {{ application_name }}
+
+- name: Scale {{ application_name }} app
+  command: oc scale dc {{ application_name }} --replicas={{ scale_to }}
