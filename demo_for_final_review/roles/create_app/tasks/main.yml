@@ -3,10 +3,10 @@
   command: oc new-project {{ application_name }}
 
 - name: Create new {{ application_name }} app
-  command: oc run {{ openshift_app_image }} --name {{ application_name }}
+  command: oc run --image {{ openshift_app_image }} {{ application_name }}
 
 - name: Scale {{ application_name }} app
-  command: oc scale dc {{ application_name }} --replicas={{ scale_to }}
+  command: oc scale dc/{{ application_name }} --replicas={{ scale_to }}
 
 - name: Extra service of LoadBalancer type for {{ application_name }} app
   command: oc expose dc/{{ application_name }} --port=80 --target-port=8080 --type LoadBalancer

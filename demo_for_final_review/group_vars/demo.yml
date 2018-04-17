@@ -1,4 +1,4 @@
 ---
 application_name: "review-meeting"
 openshift_app_image: "kuryr/demo:latest"
-scale_to: "2"
+scale_to: "3"
